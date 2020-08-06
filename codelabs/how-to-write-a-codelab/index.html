@@ -44,28 +44,21 @@
 <p class="image-container"><img alt="alt-text-here" src="img\691e5c80c660cf2d.png"></p>
 <h2 is-upgraded>一个互动教程<a href="https://codelabs.developers.google.com/codelabs/cloud-tensorflow-mnist/index.html?index=..%2F..index#0" target="_blank">例子</a></h2>
 <p class="image-container"><img alt="alt-text-here" src="img\aeba78f65b5d627d.png"></p>
+<aside class="warning"><p>Codelab 本身不支持嵌入 latex 公式</p>
+</aside>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="发布 Codelab 教程的两个方法" duration="0">
-        <h2 is-upgraded>在线写作</h2>
-<ol type="1">
-<li>用 Google Docs 按照 <a href="https://github.com/googlecodelabs/tools/blob/master/FORMAT-GUIDE.md" target="_blank">这个格式</a> 写一个 markdown 文件，记住文件的 [google-doc-id]</li>
-<li>在浏览器输入地址  https://codelabs-preview.appspot.com/?file_id=[google-doc-id] 生成预览</li>
-<li>发布 【TODO】</li>
-</ol>
-<h2 is-upgraded>离线写作：</h2>
-<ol type="1">
+      <google-codelab-step label="创作 Codelab 的流程" duration="0">
+        <ol type="1">
 <li>到 <a href="https://github.com/googlecodelabs/tools/releases/tag/v2.2.0" target="_blank">官方</a> 适合你系统的版本，比如 <a href="https://github.com/googlecodelabs/tools/releases/download/v2.2.0/claat-windows-amd64.exe" target="_blank">claat-windows-amd64.exe</a> ，保存为 claat.exe</li>
 <li>按照 <a href="https://github.com/googlecodelabs/tools/blob/master/FORMAT-GUIDE.md" target="_blank">这个格式</a> 用任意文本编辑器比如 notepad 写一个文件保存为 <strong>*.md</strong> ，用utf-8编码保存避免中文出现乱码。文件开头的 <strong>id:</strong> 后是保存生成的 html 文件的目录</li>
 <li>运行 claat 命令生成 html 文件：claat export 文件名.md</li>
-<li>双击 how-to-write-a-codelab/index.html 文件用浏览器打开检查效果</li>
-<li>把生成的目录 how-to-write-a-codelab/ 整个上传 gitee.com 用 pages 服务发布即可给国内用户浏览。也可以上传 github.com 国内用户需要翻墙浏览</li>
+<li>运行 claat serve 命令在本机 9090 端口开启一个网页服务器，并自动开启默认浏览器。在默认浏览器中点击 how-to-write-a-codelab 浏览效果。</li>
+<li>把生成的 how-to-write-a-codelab/ 目录整个上传 gitee.com 用 pages 服务发布即可给国内用户浏览。也可以上传 github.com 国内用户需要翻墙浏览</li>
 </ol>
 <aside class="warning"><p>claat 需要调用 Google 的 codelabs-preview 服务，所以需要有一个 Goolge 账号，并已经用 Chrome 登录才能使用</p>
-</aside>
-<aside class="warning"><p>生成的 index.html 文件会用到 http://*.googleapis.com 上的字体和css文件，浏览器需要下载对于的资源，国内刷新会比较慢，约1分钟。</p>
 </aside>
 <aside class="special"><p>claat 生成的是静态 html 文件，用到 http://*.googleapis.com 资源不需要翻墙就可以使用</p>
 </aside>
@@ -74,7 +67,8 @@
       </google-codelab-step>
     
       <google-codelab-step label="离线写作：使用本教程的例子" duration="2">
-        <p><a href="how-to-write-a-codelab-assets/codelab.zip" target="_blank">下载</a>本教程的源文件，压缩到一个目录比如 C:\codelab。可以看到以下文件</p>
+        <h2 is-upgraded>1. 下载例子源码</h2>
+<p><a href="how-to-write-a-codelab-assets/codelab.zip" target="_blank">下载</a>本教程的源文件，压缩到一个目录比如 C:\codelab。可以看到以下文件</p>
 <table>
 <tr></tr>
 <tr><td colspan="1" rowspan="1"><p>claat.exe</p>
@@ -87,6 +81,7 @@
 </td><td colspan="1" rowspan="1"><p>本教程的 markdown 文件</p>
 </td></tr>
 </table>
+<h2 is-upgraded>2. 用 claat 生成 html 文件</h2>
 <p>打开 cmd 命令行窗口，并进 c:\codelab 目录，运行 claat.exe 生成 html 文件</p>
 <pre><code>c:\codelab&gt; claat.exe export how-to-write-a-codelab.md
 ok      how-to-write-a-codelab
@@ -94,7 +89,48 @@ ok      how-to-write-a-codelab
 <p>成功生成 html 文件并保存在 how-to-write-a-codelab 目录下。</p>
 <aside class="special"><p>*.md 文件里面引用到所有本地图片等资源都会复制到生成的目录下。</p>
 </aside>
-<p>双击生成的 how-to-write-a-codelab\index.html 用浏览器打开<br><img alt="预览" src="img\bff29bafec94e966.png"></p>
+<h2 is-upgraded>3. 启动网页服务器测试生成的 html 文件</h2>
+<p>在命令行运行 claat serve：</p>
+<pre><code>c:\codelab&gt; claat serve
+Serving codelabs on localhost:9090, opening browser tab now...
+</code></pre>
+<p>Claat 会自动打开系统默认浏览器</p>
+<p class="image-container"><img alt="预览" src="img\9ed91f4dd33fad41.png"></p>
+<p>在打开的浏览器内点击 how-to-write-a-codelab 目录</p>
+<p class="image-container"><img alt="预览" src="img\bff29bafec94e966.png"></p>
+<h2 is-upgraded>4. 如果 Claat 无法启动网页服务器</h2>
+<p>Claat 默认使用 9090 端口，如果该端口已经被占用会出现以下错误</p>
+<pre><code>c:\codelab&gt; claat.exe serve
+Serving codelabs on localhost:9090, opening browser tab now...
+claat serve: listen tcp 127.0.0.1:9090: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+</code></pre>
+<p>可以用 -addr 指定一个不同的端口，比如 9999</p>
+<pre><code>c:\codelab&gt; claat.exe serve -addr localhost:9999
+Serving codelabs on localhost:9999, opening browser tab now...
+</code></pre>
+<p>在命令窗口输入 Ctrl + C 可以停止 claat serve 开启的服务器。如果没有反应，多按几次 Ctrl + C</p>
+<h2 is-upgraded>5. 如果默认浏览器（如 Microsoft Edge）无法正常显示</h2>
+<p>试过用系统默认的 Microsoft Edge 浏览器打开时，Codelab 左手边的菜单不见了。翻墙之后可以正常显示。正常显示过一次后，每次不用翻墙也可以正常显示。用 Chrome 打开，不翻墙好像也可以正常显示。</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="用 gitee.io 的个人网站功能发布" duration="2">
+        <ol type="1">
+<li>去 <a href="https://gitee.com/" target="_blank">码云</a> 注册一个免费账号，比如 <strong>ProfZhuWB</strong>，需要绑定手机号码才能使用个人网站功能</li>
+<li>登录后创建一个与账号同名的仓库，比如 <strong>ProfZhuWB</strong></li>
+<li>用 git 客户端比如 TortoiseGit 把创建的空仓库 clone 到本地，比如 d:\git-ivan\ProfZhuWB.git</li>
+<li>把个人网站的内容，比如 how-to-write-a-codelab 整个目录放入本地仓库比如，d:\git-ivan\ProfZhuWB.git</li>
+<li>用 git 客户端 commit, 并把更新的内容 push 到 gitee.com</li>
+<li>在浏览器地址栏输入 https://gitee.com/ProfZhuWB/ProfZhuWB/pages 去到 Pages 服务页面。<br><br><ul>
+<li>勾选页面左下角的 Enforce HTTPS 选项</li>
+<li>点击页面左下角的 Create 按钮</li>
+</ul>
+</li>
+<li>把链接 https://ProfZhuWB.gitee.com/how-to-write-a-codelab/ 发给朋友</li>
+</ol>
+<aside class="warning"><p>每次把本地仓库的内容推送到 gitee.com 以后都要在 Pages 服务页面按左下角的 Update 按钮，更新后的内容才会发布给公众。</p>
+</aside>
 
 
       </google-codelab-step>
