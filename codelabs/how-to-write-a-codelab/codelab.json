@@ -3,23 +3,23 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2020-08-05T17:16:12+08:00",
+  "updated": "2020-08-06T12:43:11+08:00",
   "id": "how-to-write-a-codelab",
-  "duration": 8,
-  "title": "How to Write a Codelab",
-  "authors": "Zarin",
-  "summary": "How to Write a Codelab",
+  "duration": 4,
+  "title": "用 Codelab 写教程",
+  "authors": "Prof. Wenbin Zhu",
+  "summary": "",
   "source": "how-to-write-a-codelab.md",
   "theme": "",
   "status": [
     "published"
   ],
   "category": [
-    "sample"
+    "writing"
   ],
   "tags": [
     "medium"
   ],
-  "feedback": "https://zarin.io",
+  "feedback": "https://ProfZhuWB.gitee.com/how-to-write-a-codelab",
   "url": "how-to-write-a-codelab"
 }
