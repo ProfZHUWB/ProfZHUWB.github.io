@@ -1,0 +1,21 @@
+
+digraph G {
+	graph [center=1 rankdir=LR]
+	edge [dir=none]
+	node [width=0.3 height=0.3 ]
+	{ node [shape=square]
+		x1[label="x_1"] x2[label="x_2"]
+	}
+	{ node [shape=circle]
+		h11[label="h_{1,1}"] h12[label="h_{1,2}"] h13[label="h_{1,3}"]
+		h21[label="h_{2,1}"] h22[label="h_{2,2}"] y
+	}
+    x1 -> h11[label="w_{1,1}"]
+    x1 -> h12 -> h21
+    x1 -> h13 -> h21
+    x2 -> h11 -> h22 -> y
+    x2 -> h12 -> h22
+    x2 -> h13 -> h22
+    h11 -> h21[label="w_{2,1,1}"]
+    h21 -> y
+}

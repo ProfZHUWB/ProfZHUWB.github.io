@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage[x11names, svgnames, rgb]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{snakes,arrows,shapes}
+\usepackage{amsmath}
+%
+%
+
+%
+
+%
+
+\begin{document}
+\pagestyle{empty}
+%
+%
+%
+
+\enlargethispage{100cm}
+% Start of code
+\begin{tikzpicture}[>=latex',line join=bevel,]
+%%
+\begin{scope}
+  \pgfsetstrokecolor{black}
+  \definecolor{strokecol}{rgb}{1.0,1.0,1.0};
+  \pgfsetstrokecolor{strokecol}
+  \definecolor{fillcol}{rgb}{1.0,1.0,1.0};
+  \pgfsetfillcolor{fillcol}
+  \filldraw (0.0bp,0.0bp) -- (0.0bp,308.51bp) -- (475.96bp,308.51bp) -- (475.96bp,0.0bp) -- cycle;
+\end{scope}
+\begin{scope}
+  \pgfsetstrokecolor{black}
+  \definecolor{strokecol}{rgb}{1.0,1.0,1.0};
+  \pgfsetstrokecolor{strokecol}
+  \definecolor{fillcol}{rgb}{1.0,1.0,1.0};
+  \pgfsetfillcolor{fillcol}
+  \filldraw (0.0bp,0.0bp) -- (0.0bp,308.51bp) -- (475.96bp,308.51bp) -- (475.96bp,0.0bp) -- cycle;
+\end{scope}
+  \node (x1) at (19.5bp,173.25bp) [draw,regular polygon, regular polygon sides=4] {$x_1$};
+  \node (x2) at (19.5bp,98.255bp) [draw,regular polygon, regular polygon sides=4] {$x_2$};
+  \node (h11) at (171.25bp,263.25bp) [draw,circle] {$h_{1,1}$};
+  \node (h12) at (171.25bp,154.25bp) [draw,circle] {$h_{1,2}$};
+  \node (h13) at (171.25bp,45.255bp) [draw,circle] {$h_{1,3}$};
+  \node (h21) at (359.76bp,177.25bp) [draw,circle] {$h_{2,1}$};
+  \node (h22) at (359.76bp,68.255bp) [draw,circle] {$h_{2,2}$};
+  \node (y) at (458.99bp,122.25bp) [draw,circle] {$y$};
+  \draw [] (x1) ..controls (62.294bp,198.37bp) and (102.29bp,222.41bp)  .. (h11);
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (82.5bp,230.75bp) node {$w_{1,1}$};
+  \draw [] (x1) ..controls (60.804bp,168.14bp) and (97.207bp,163.52bp)  .. (h12);
+  \draw [] (x1) ..controls (63.392bp,136.59bp) and (106.12bp,100.07bp)  .. (h13);
+  \draw [] (x2) ..controls (56.468bp,136.96bp) and (84.226bp,166.99bp)  .. (108.0bp,193.25bp) .. controls (118.7bp,205.07bp) and (130.33bp,218.1bp)  .. (h11);
+  \draw [] (x2) ..controls (61.431bp,113.56bp) and (99.33bp,127.73bp)  .. (h12);
+  \draw [] (x2) ..controls (44.768bp,88.798bp) and (51.132bp,86.39bp)  .. (57.0bp,84.255bp) .. controls (80.451bp,75.723bp) and (106.8bp,66.62bp)  .. (h13);
+  \draw [] (h11) ..controls (240.2bp,247.1bp) and (270.98bp,237.4bp)  .. (296.51bp,224.25bp) .. controls (306.14bp,219.3bp) and (315.83bp,212.85bp)  .. (h21);
+  \draw (265.51bp,254.75bp) node {$w_{2,1,1}$};
+  \draw [] (h11) ..controls (238.0bp,194.51bp) and (293.31bp,136.69bp)  .. (h22);
+  \draw [] (h12) ..controls (246.08bp,163.36bp) and (284.93bp,168.15bp)  .. (h21);
+  \draw [] (h12) ..controls (244.01bp,121.17bp) and (287.11bp,101.3bp)  .. (h22);
+  \draw [] (h13) ..controls (241.52bp,94.278bp) and (289.62bp,128.32bp)  .. (h21);
+  \draw [] (h13) ..controls (246.08bp,54.359bp) and (284.93bp,59.15bp)  .. (h22);
+  \draw [] (h21) ..controls (415.14bp,146.49bp) and (432.25bp,136.81bp)  .. (y);
+  \draw [] (h22) ..controls (415.18bp,98.475bp) and (431.95bp,107.79bp)  .. (y);
+%
+\end{tikzpicture}
+% End of code
+
+%
+\end{document}
+%
+
+
+
