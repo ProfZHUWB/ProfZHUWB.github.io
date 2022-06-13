@@ -41,9 +41,9 @@
     
       <google-codelab-step label="Google Codelabs 的优势" duration="1">
         <h2 is-upgraded>Google Codelabs <a href="https://codelabs.developers.google.com/" target="_blank">首页</a> 有很多教程</h2>
-<p class="image-container"><img alt="alt-text-here" src="img\691e5c80c660cf2d.png"></p>
+<p class="image-container"><img alt="alt-text-here" src="img\\691e5c80c660cf2d.png"></p>
 <h2 is-upgraded>一个互动教程<a href="https://codelabs.developers.google.com/codelabs/cloud-tensorflow-mnist/index.html?index=..%2F..index#0" target="_blank">例子</a></h2>
-<p class="image-container"><img alt="alt-text-here" src="img\aeba78f65b5d627d.png"></p>
+<p class="image-container"><img alt="alt-text-here" src="img\\aeba78f65b5d627d.png"></p>
 <aside class="warning"><p>Codelab 本身不支持嵌入 latex 公式</p>
 </aside>
 
@@ -53,7 +53,7 @@
       <google-codelab-step label="创作 Codelab 的流程" duration="0">
         <ol type="1">
 <li>到 <a href="https://github.com/googlecodelabs/tools/releases/tag/v2.2.0" target="_blank">官方</a> 适合你系统的版本，比如 <a href="https://github.com/googlecodelabs/tools/releases/download/v2.2.0/claat-windows-amd64.exe" target="_blank">claat-windows-amd64.exe</a> ，保存为 claat.exe</li>
-<li>按照 <a href="https://github.com/googlecodelabs/tools/blob/master/FORMAT-GUIDE.md" target="_blank">这个格式</a> 用任意文本编辑器比如 notepad 写一个文件保存为 <strong>*.md</strong> ，用utf-8编码保存避免中文出现乱码。<br>文件开头的 <strong>id:</strong> 后是保存生成的 html 文件的目录。<a href="https://www.markdownguide.org/basic-syntax/" target="_blank">Markdown 的基本语法</a></li>
+<li>按照 <a href="https://github.com/googlecodelabs/tools/blob/master/FORMAT-GUIDE.md" target="_blank">这个格式</a> 用任意文本编辑器比如 notepad 写一个文件保存为 <strong>*.md</strong> ，用utf-8编码保存避免中文出现乱码。 文件开头的 <strong>id:</strong> 后是保存生成的 html 文件的目录。<a href="https://www.markdownguide.org/basic-syntax/" target="_blank">Markdown 的基本语法</a></li>
 <li>运行 claat 命令生成 html 文件：claat export 文件名.md</li>
 <li>运行 claat serve 命令在本机 9090 端口开启一个网页服务器，并自动开启默认浏览器。在默认浏览器中点击 how-to-write-a-codelab 浏览效果。</li>
 <li>把生成的 how-to-write-a-codelab/ 目录整个上传 gitee.com 用 pages 服务发布即可给国内用户浏览。也可以上传 github.com 国内用户需要翻墙浏览</li>
@@ -70,9 +70,11 @@
         <h2 is-upgraded>1. 下载例子源码</h2>
 <p><a href="assets/codelab.zip_" target="_blank">下载</a>本教程的源文件，重新命名为 *.zip ，压缩到一个目录比如 C:\codelab。可以看到以下文件</p>
 <table>
-<tr></tr>
+<tr><td colspan="1" rowspan="1"><p>文件</p>
+</td><td colspan="1" rowspan="1"><p>描述</p>
+</td></tr>
 <tr><td colspan="1" rowspan="1"><p>claat.exe</p>
-</td><td colspan="1" rowspan="1"><p>claat-windows-amd64.exe <a href="https://github.com/googlecodelabs/tools/releases/download/v2.2.0" target="_blank">2.2.0 版本</a></p>
+</td><td colspan="1" rowspan="1"><p>claat-windows-amd64.exe <a href="https://github.com/googlecodelabs/tools/releases/tag/v2.2.4" target="_blank">2.2.4 版本</a></p>
 </td></tr>
 <tr><td colspan="1" rowspan="1"><p>how-to-write-a-codelab-assets</p>
 </td><td colspan="1" rowspan="1"><p>本教程用到的图片资源文件，会自动复制到生成的目录下</p>
@@ -86,35 +88,35 @@
 </table>
 <h2 is-upgraded>2. 用 claat 生成 html 文件</h2>
 <p>打开 cmd 命令行窗口，并进 c:\codelab 目录，运行 claat.exe 生成 html 文件</p>
-<pre><code>c:\codelab&gt; claat.exe export how-to-write-a-codelab.md
+<pre>c:\codelab&gt; claat.exe export how-to-write-a-codelab.md
 ok      how-to-write-a-codelab
-</code></pre>
+</pre>
 <p>成功生成 html 文件并保存在 how-to-write-a-codelab 目录下。</p>
 <aside class="special"><p>*.md 文件里面引用到所有本地图片都会复制到生成的目录下的 img 子目录，并且把涉及到的链接都修改到正确位置。</p>
 </aside>
-<aside class="warning"><p>*.md 文件里面引用到的非图片，比如 zip 文件，需要手段复制到生成的目录下。建议把这类文件存在 assets 子目录，<br>然后把整个子目录复制到生成的目录下。</p>
+<aside class="warning"><p>*.md 文件里面引用到的非图片，比如 zip 文件，需要手段复制到生成的目录下。建议把这类文件存在 assets 子目录， 然后把整个子目录复制到生成的目录下。</p>
 </aside>
-<aside class="warning"><p>用 码云 个人主页时，常见的压缩文件比如 *.zip *.7z 是不允许下载的，所以建议在文件名字后面加一个下划线(_)<br>然后提醒用户下载后删除末尾的下划线</p>
+<aside class="warning"><p>用 码云 个人主页时，常见的压缩文件比如 *.zip *.7z 是不允许下载的，所以建议在文件名字后面加一个下划线(_) 然后提醒用户下载后删除末尾的下划线</p>
 </aside>
 <h2 is-upgraded>3. 启动网页服务器测试生成的 html 文件</h2>
 <p>在命令行运行 claat serve：</p>
-<pre><code>c:\codelab&gt; claat serve
+<pre>c:\codelab&gt; claat serve
 Serving codelabs on localhost:9090, opening browser tab now...
-</code></pre>
+</pre>
 <p>Claat 会自动打开系统默认浏览器</p>
-<p class="image-container"><img alt="预览" src="img\9ed91f4dd33fad41.png"></p>
+<p class="image-container"><img alt="预览" src="img\\9ed91f4dd33fad41.png"></p>
 <p>在打开的浏览器内点击 how-to-write-a-codelab 目录</p>
-<p class="image-container"><img alt="预览" src="img\bff29bafec94e966.png"></p>
+<p class="image-container"><img alt="预览" src="img\\bff29bafec94e966.png"></p>
 <h2 is-upgraded>4. 如果 Claat 无法启动网页服务器</h2>
 <p>Claat 默认使用 9090 端口，如果该端口已经被占用会出现以下错误</p>
-<pre><code>c:\codelab&gt; claat.exe serve
+<pre>c:\codelab&gt; claat.exe serve
 Serving codelabs on localhost:9090, opening browser tab now...
 claat serve: listen tcp 127.0.0.1:9090: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
-</code></pre>
+</pre>
 <p>可以用 -addr 指定一个不同的端口，比如 9999</p>
-<pre><code>c:\codelab&gt; claat.exe serve -addr localhost:9999
+<pre>c:\codelab&gt; claat.exe serve -addr localhost:9999
 Serving codelabs on localhost:9999, opening browser tab now...
-</code></pre>
+</pre>
 <p>在命令窗口输入 Ctrl + C 可以停止 claat serve 开启的服务器。如果没有反应，多按几次 Ctrl + C</p>
 <h2 is-upgraded>5. 如果默认浏览器（如 Microsoft Edge）无法正常显示</h2>
 <p>试过用系统默认的 Microsoft Edge 浏览器打开时，Codelab 左手边的菜单不见了。翻墙之后可以正常显示。正常显示过一次后，每次不用翻墙也可以正常显示。用 Chrome 打开，不翻墙好像也可以正常显示。</p>
@@ -131,7 +133,7 @@ Serving codelabs on localhost:9999, opening browser tab now...
 <li>点公式下方（浅蓝色圈内的) Click here to Download 链接下载并保存图片</li>
 <li>把图片嵌入到自己的网页中</li>
 </ol>
-<p class="image-container"><img alt="预览" src="img\6c43b64087d1fc4a.png"></p>
+<p class="image-container"><img alt="预览" src="img\\6c43b64087d1fc4a.png"></p>
 <aside class="special"><p><a href="https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols" target="_blank">常用 Latex 数学符号</a></p>
 </aside>
 
@@ -145,7 +147,7 @@ Serving codelabs on localhost:9999, opening browser tab now...
 <li>用 git 客户端比如 TortoiseGit 把创建的空仓库 clone 到本地，比如 d:\git-ivan\ProfZhuWB.git</li>
 <li>把个人网站的内容，比如 how-to-write-a-codelab 整个目录放入本地仓库比如，d:\git-ivan\ProfZhuWB.git</li>
 <li>用 git 客户端 commit, 并把更新的内容 push 到 gitee.com</li>
-<li>在浏览器地址栏输入 https://gitee.com/ProfZhuWB/ProfZhuWB/pages 去到 Pages 服务页面。<br><br><ul>
+<li>在浏览器地址栏输入 https://gitee.com/ProfZhuWB/ProfZhuWB/pages 去到 Pages 服务页面。  <ul>
 <li>勾选页面左下角的 Enforce HTTPS 选项</li>
 <li>点击页面左下角的 Create 按钮</li>
 </ul>
@@ -164,6 +166,7 @@ Serving codelabs on localhost:9999, opening browser tab now...
   <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
   <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
   <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
 
 </body>
 </html>
