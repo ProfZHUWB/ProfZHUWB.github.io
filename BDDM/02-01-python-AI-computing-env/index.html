@@ -1,0 +1,233 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Python 机器学习平台介绍</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="02-01-python-AI-computing-env"
+                  title="Python 机器学习平台介绍"
+                  environment="web"
+                  feedback-link="https://ProfZhuWB.gitee.io/BDDM/02-01-python-AI-computing-env">
+    
+      <google-codelab-step label="概览" duration="2">
+        <h2 is-upgraded>你将学会</h2>
+<ul>
+<li>在线机器学习平台阿里云天池实验室、Google colab 与自己安装软件的优劣</li>
+<li>天池实验室新建 notebook (Python 程序)</li>
+<li>天池实验室修改 notebook 程序的文件名</li>
+<li>上传自己电脑中的 notebook 程序到天池实验室</li>
+<li>删除天池实验室中的 notebook 程序</li>
+<li>用天池实验室的 Data Science Workspace (DSW) 编辑或运行 notebook</li>
+<li>上传自己电脑里的数据文件到 DSW</li>
+<li>从 DSW 下载文件（运行结果、程序等）到自己电脑</li>
+<li>从 DSW 保存修改过的 notebook 到天池实验室</li>
+<li>在天池实验室发布自己的程序</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="在线机器学习平台" duration="1">
+        <p>开发和运行机器学习模型需要 Python、pandas、Scikit-learn 等诸多软件。如果自己有台性能不错的电脑，可以自己把需要的软件下载安装，搭建一个自己的开发平台。对于初学者来说，更容易的方案是通过浏览器直接使用在线平台来编辑和运行程序。比较有影响力的在线平台有三个：</p>
+<ol type="1">
+<li><a href="https://tianchi.aliyun.com/notebook-ai?lang=zh-cn" target="_blank">阿里云天池实验室</a>，由阿里云提供每次登录可以连续使用 8 个小时，可以使用 5GB 空间保存数据。天池平台每年举办多次数据分析比赛，积累了很多数据集和参赛选手分享的代码。为学习数据分析提供了比较多的真实场景。</li>
+<li><a href="https://colab.research.google.com/?utm_source=scs-index" target="_blank">Google colab</a> 由谷歌提供。可以直接在浏览器内编辑和运行 jupyter notebook 代码。美中不足，国内无法直接连接，需要翻墙。</li>
+<li><a href="https://www.kaggle.com/" target="_blank">Kaggle</a> 英文版数据分析比赛的网站。天池实验室实际上是在模仿这个网站。Kaggle 每年举办大量数据分析比赛。有很多数据集和相关分析代码。</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="天池实验室、Google colab 与自建平台的比较" duration="5">
+        <p>下表简要总结天池实验室、Google colab 与自建平台这三个方案中各常见软件的版本。其中自建平台一列，是 2022-06-16 日可以下载到的最新版本。</p>
+<table>
+<tr><td colspan="1" rowspan="1"><p>软件</p>
+</td><td colspan="1" rowspan="1"><p>天池实验室</p>
+</td><td colspan="1" rowspan="1"><p>Google colab</p>
+</td><td colspan="1" rowspan="1"><p>自建平台</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Python</p>
+</td><td colspan="1" rowspan="1"><p>3.6.9</p>
+</td><td colspan="1" rowspan="1"><p>3.7.13</p>
+</td><td colspan="1" rowspan="1"><p>3.9.12</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Jupyter-core</p>
+</td><td colspan="1" rowspan="1"><p>4.7.0</p>
+</td><td colspan="1" rowspan="1"><p>4.10.0</p>
+</td><td colspan="1" rowspan="1"><p>4.10.0</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>notebook</p>
+</td><td colspan="1" rowspan="1"><p>6.1.6</p>
+</td><td colspan="1" rowspan="1"><p>5.3.1</p>
+</td><td colspan="1" rowspan="1"><p>6.4.11</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>pandas</p>
+</td><td colspan="1" rowspan="1"><p>1.1.5</p>
+</td><td colspan="1" rowspan="1"><p>1.3.5</p>
+</td><td colspan="1" rowspan="1"><p>1.4.2</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>numpy</p>
+</td><td colspan="1" rowspan="1"><p>1.19.4</p>
+</td><td colspan="1" rowspan="1"><p>1.21.6</p>
+</td><td colspan="1" rowspan="1"><p>1.20. 3</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>matplotlib</p>
+</td><td colspan="1" rowspan="1"><p>3.3.3</p>
+</td><td colspan="1" rowspan="1"><p>3.2.2</p>
+</td><td colspan="1" rowspan="1"><p>3.5.1</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>sklearn</p>
+</td><td colspan="1" rowspan="1"><p>0.19.1</p>
+</td><td colspan="1" rowspan="1"><p>1.0.2</p>
+</td><td colspan="1" rowspan="1"><p>1.0.2</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>keras</p>
+</td><td colspan="1" rowspan="1"><p>2.2.4</p>
+</td><td colspan="1" rowspan="1"><p>2.8.0</p>
+</td><td colspan="1" rowspan="1"><p>2.9.0</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>troch</p>
+</td><td colspan="1" rowspan="1"><p>1.7.1</p>
+</td><td colspan="1" rowspan="1"><p>1.11.0+cu113</p>
+</td><td colspan="1" rowspan="1"><p>1.11.0+cu113</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>优点</p>
+</td><td colspan="1" rowspan="1"><p>无需安装配置、国内很快</p>
+</td><td colspan="1" rowspan="1"><p>无需安装配置、可以通过网页直接编辑运行代码</p>
+</td><td colspan="1" rowspan="1"><p>无需联网、版本新、运行时间没有限制</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>缺点</p>
+</td><td colspan="1" rowspan="1"><p>软件版本较旧；网页只显示代码不能直接运行，需要启动虚拟机来运行代码</p>
+</td><td colspan="1" rowspan="1"><p>国内使用需要翻墙</p>
+</td><td colspan="1" rowspan="1"><p>安装配置比较繁琐</p>
+</td></tr>
+</table>
+<aside class="special"><p>虽然天池实验室的软件版本比较旧，也可以基本满足初学者使用。</p>
+</aside>
+<aside class="warning"><p>天池 notebook 页面只展示 notebook 程序的内容，不能直接编辑和运行。当点击 <strong>编辑</strong> 按钮时，天池 notebook 会先启动一个虚拟机，把程序下载到虚拟机，然后在虚拟机里面进行编辑和修改。</p>
+</aside>
+<h2 is-upgraded>编程语言 Python</h2>
+<p>在机器学习领域，Python 是比较多人使用的主流编程语言。很多常见的机器学习的算法与模型都有 Python 版本。除了 Python 其它主流编程语言也对机器学习有不同程度的支持，比如 R 语言、Matlab、Java、C++。</p>
+<p>Python 相对比较容易上手，属于中等篇容易的编程语言，比较适合编程小白。语言本身比较简洁，特别适合开发中小规模的应用。通常完成一个编程任务需要的时间比 Java/C++ 等语言少很多。</p>
+<p>Python 语言有两个大的版本 2.0 与 3.0 它们的语法有比较大的不同。</p>
+<h2 is-upgraded>机器学习三大主流框架</h2>
+<p>基于 Python 有三大免费、开源的主流机器学习框架</p>
+<ol type="1">
+<li><a href="https://scikit-learn.org/stable/" target="_blank">scikit-lern</a> 包含很多经典的机器学习算法和模型，比如 决策树、随机森林、支持向量机、神经网络、GBDT。适合基于表格数据的预测与回归任务。比如每一行代表一条贷款记录，每一列记录贷款的信息比如贷款人、金额、是否有逾期还款。基于历史数据学习一个分类模型，预测一笔贷款预期不还的可能性。特别适合中小规模数据（比如几千至几十万条），探索和对比多种机器学习算法的优劣。比较难处理超大规模任务，比如几百万条、甚至几亿条记录。</li>
+<li><a href="https://pytorch.org/" target="_blank">PyTorch</a>，由 Facebook 主推。很多研究神经网络科的研人员和学者使用。如果电脑有安装英伟达显卡，可以利用显卡加速机器学习模型的训练。对于训练大的神经网络，比如人脸识别、车牌识别、机器翻译这种类型的模型，往往可以加速几倍甚至几十倍。语法比较简单。因为很多学者使用，并且大家会把模型的代码分享出来，所以比较适合尝试探索新模型。</li>
+<li><a href="https://www.tensorflow.org/" target="_blank">Tensorflow/Keras</a>，由 Google 主推。适合训练超大规模模型，与 PyTorch 一样支持用英伟达显卡加速训练机器学习模型。适合大规模部署学习好的模型。比如做好了贷款违约预测模型，要把它上线，自动审批客户的贷款申请。这个时候用 Tensorflow 就比较方便，因为很多网站的后台服务是由 Java 语言开发的，前端手机 app 可能又要用到 Javascript，而 Tensorflow 支持多种语言开发。但是，对于做数据分析的人来说，直接使用 Tensorflow 比较复杂。新版的 Tensorflow 提供了 Keras，对开发和训练常用机器学习模型进行了些简化。比直接使用 Tensorflow 容易很多。</li>
+</ol>
+<h2 is-upgraded>其它常用软件</h2>
+<ol type="1">
+<li><a href="https://pandas.pydata.org/" target="_blank">pandas</a> 很多时候，我要处理的是表格数据。要对表格进行筛选、合并、查询、分组统计等工作。Pandas 实现了很多基本的表格操作、展示等功能。它比 excel 更强大。当然如果很熟悉 excel 的学员，也可以用 excel 处理数据，处理好的数据保存成  *.xlsx 或者 *.csv 文件。机器学习算法，需要从文件读入数据的时候，也可以用 pandas 很方便的读取我们保存的  *.xlsx 或者 *.csv 文件。</li>
+<li><a href="https://matplotlib.org/" target="_blank">matplotlib</a> 主要用来绘图展示数据，比如箱线图、饼图、柱状图等。</li>
+<li><a href="https://numpy.org/" target="_blank">numpy</a> 是 Python 中做科学计算常用的软件库。很多机器学习算法需要用到它。</li>
+<li><a href="https://jupyter.org/" target="_blank">jupyter notebook</a> 把程序、文字说明、计算结果、生成的图表在一个文件中统一展示的文件格式。适合交流和分享想法的文件格式。本课程提供的程序都以 notebook 的格式保存。</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="天池实验室新建 notebook (Python 程序)" duration="2">
+        <ol type="1">
+<li>右键点击 <a href="[https://tianchi.aliyun.com/notebook-ai](https://tianchi.aliyun.com/notebook-ai" target="_blank">天池Notebook</a> 选择在新的标签页打开链接。或者复制链接 https://tianchi.aliyun.com/notebook-ai?lang=zh-cn 到浏览器的地址栏，可以见到下图页面。 <img alt="天池notebook主页" src="img\\2679e5323da38053.png"></li>
+<li>点击上图中的 <strong>我的实验室</strong> 按钮，如果还没有登录，会见到下图的登录页面。如果已经登录过，会跳过第3步直接跳到第4步的页面。 <img alt="登录页面" src="img\\3255a8ded906f771.png"></li>
+<li>用手机支付宝app扫描上图中的二维码，然后在手机上点 <strong>确认登录</strong> 按钮（见下图）。如果还没有阿里云账号，可点击上图右上角的 &#34;注册&#34; 按钮免费注册一个账号。 <img alt="手机支付宝app确认页面" src="img\\395dffaf9f0e0d70.jpg"></li>
+<li>成功登录以后在电脑浏览器中见到下图页面。 <img alt="新建页面" src="img\\2d4786fa81f84ad0.png"></li>
+<li>点上图左下角的 <strong>+ 新建</strong> 按钮，会创建一个新notebook文件，见下图 <img alt="新建完成页面" src="img\\7a866ce7935ac38a.png"></li>
+<li>天池会在新建的文件中自动插入一些代码（见上图红色框）。自动插入的代码在上图红色箭头所指的 <strong>内容标签</strong> 下展示。注意新建的文件名字为 <strong>&#34;Draft &#34; + 创建时间</strong>（见上图蓝色箭头所指位置）。下一步教大家怎么修改文件名字。</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="天池实验室修改 notebook 程序的文件名" duration="2">
+        <ol type="1">
+<li>在下图左下角点选需要修改的文件（红色箭头所指处） <img alt="选择文件页面" src="img\\54a5dc7ac8e7db24.png"></li>
+<li>在上图右上角点击 <strong>发布与设置</strong> 按钮，会弹出下图的对话框 <img alt="修改文件名页面" src="img\\4731eee49c59bd83.png"></li>
+<li>在上图 <strong>项目名称</strong> （红色箭头处）中输入新的文件名字，然后点 <strong>保存</strong> 按钮 <img alt="修改后页面" src="img\\7a18ec540548e294.png"></li>
+<li>上图中（红色箭头处）文件名字已经修改完成</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="上传自己电脑中的 notebook 程序到天池实验室" duration="2">
+        <p>如果已经在自己电脑写好 Python 程序，也可以直接把写好的 notebook 直接上传到天池实验室。如果你的电脑上还没有 Python notebook 程序，右键点 <a href="codes/check_version.ipyn" target="_blank">下载 check_version.ipynb</a> ，在弹出的菜单选 <strong>保存链接为</strong> 保存到你的电脑上。</p>
+<ol type="1">
+<li>在 <a href="[https://tianchi.aliyun.com/notebook-ai" target="_blank">天池Notebook</a> 页面的左下角（下图红色箭头处）点 <strong>上传</strong><img alt="天池notebook页面" src="img\\2732b2bce484f2b1.png"></li>
+<li>在弹出的窗口里面，先通过下图红色箭头处的地址栏，找到保存在自己电脑上的文件，再在蓝色箭头处点一下找到的文件，然后点一下绿色箭头出的 <strong>打开</strong> 按钮 <img alt="打开文件页面" src="img\\334a7df5409e5163.png"></li>
+<li>通常几秒钟就会上传成功，上传的文件会自动命名为 <strong>Draft Default + 上传时间</strong> （见下图左下角红色箭头处）。可以按照<strong>上一步</strong>修改文件名。 <img alt="天池notebook页面" src="img\\8d6cdabece25f547.png"></li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="删除天池实验室中的 notebook 程序" duration="2">
+        <ol type="1">
+<li>在 <a href="[https://tianchi.aliyun.com/notebook-ai" target="_blank">天池Notebook</a> 页面左下角（下图红色箭头处）选中要删除的文件，选中的文件的背景会变成灰色。 <img alt="选择待删除文件" src="img\\122ab95e49a55f12.png"></li>
+<li>点击上图蓝色箭头处 <strong>删除</strong>，出现以下确认页面 <img alt="确认删除页面" src="img\\2701061300591cda.png"></li>
+<li>点击上图红色箭头处 <strong>确认</strong> 按钮，完成删除。</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="用天池实验室的 Data Science Workspace (DSW) 编辑或运行 notebook" duration="2">
+        <p>TODO</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="上传自己电脑里的数据文件到 DSW" duration="2">
+        <p>TODO</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="从 DSW 下载文件（运行结果、程序等）到自己电脑" duration="2">
+        <p>TODO</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="从 DSW 保存修改过的 notebook 到天池实验室" duration="2">
+        <p>TODO</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="在天池实验室发布自己的程序" duration="2">
+        <p>TODO</p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

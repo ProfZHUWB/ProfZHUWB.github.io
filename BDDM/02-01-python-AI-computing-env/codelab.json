@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2022-06-20T08:32:19+08:00",
+  "id": "02-01-python-AI-computing-env",
+  "duration": 26,
+  "title": "Python 机器学习平台介绍",
+  "authors": "Prof. Wenbin Zhu",
+  "summary": "",
+  "source": ".\\02-01-python-AI-computing-env.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "writing"
+  ],
+  "tags": [
+    "medium"
+  ],
+  "feedback": "https://ProfZhuWB.gitee.io/BDDM/02-01-python-AI-computing-env",
+  "url": "02-01-python-AI-computing-env"
+}
