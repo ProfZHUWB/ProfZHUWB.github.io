@@ -1,0 +1,27 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2022-06-21T15:59:32+08:00",
+  "id": "BDDM-intro",
+  "duration": 3,
+  "title": "Big Data and Data Mining",
+  "authors": "Prof. Wenbin Zhu",
+  "summary": "",
+  "source": ".\\BDDM-intro.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "python",
+    "ai",
+    "tianchi notebook"
+  ],
+  "tags": [
+    "medium"
+  ],
+  "feedback": "https://ProfZhuWB.gitee.io/BDDM/",
+  "url": "BDDM-intro"
+}
