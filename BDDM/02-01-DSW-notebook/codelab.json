@@ -3,13 +3,13 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2022-06-21T15:06:13+08:00",
-  "id": "02-01-python-AI-computing-env",
-  "duration": 28,
-  "title": "Python 机器学习平台介绍",
+  "updated": "2022-06-21T15:04:17+08:00",
+  "id": "02-01-DSW-notebook",
+  "duration": 3,
+  "title": "Jupyter Notebook简介",
   "authors": "Prof. Wenbin Zhu",
   "summary": "",
-  "source": ".\\02-01-python-AI-computing-env.md",
+  "source": ".\\02-01-DSW-notebook.md",
   "theme": "",
   "status": [
     "published"
@@ -22,6 +22,6 @@
   "tags": [
     "medium"
   ],
-  "feedback": "https://ProfZhuWB.gitee.io/BDDM/02-01-python-AI-computing-env",
-  "url": "02-01-python-AI-computing-env"
+  "feedback": "https://ProfZhuWB.gitee.io/BDDM/02-01-DSW-notebook",
+  "url": "02-01-DSW-notebook"
 }
